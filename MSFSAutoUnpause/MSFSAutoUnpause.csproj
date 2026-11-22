@@ -30,6 +30,18 @@
     </Reference>
   </ItemGroup>
 
+  <!-- Single-file publish only: keep SimConnect next to the exe instead of inside it.
+       Microsoft.FlightSimulator.SimConnect.dll is a mixed-mode (C++/CLI) assembly, which
+       cannot be loaded from inside a single-file bundle, and it loads the native
+       SimConnect.dll from the exe's folder. No effect on normal builds. -->
+  <Target Name="KeepSimConnectOutsideBundle" AfterTargets="ComputeResolvedFilesToPublishList" Condition="'$(PublishSingleFile)' == 'true'">
+    <ItemGroup>
+      <_KeepNextToExe Include="@(ResolvedFileToPublish)" Condition="'%(Filename)' == 'Microsoft.FlightSimulator.SimConnect' Or '%(Filename)' == 'SimConnect' Or '%(Filename)%(Extension)' == 'icon.ico'" />
+      <ResolvedFileToPublish Remove="@(_KeepNextToExe)" />
+      <ResolvedFileToPublish Include="@(_KeepNextToExe)" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+  </Target>
+
   <!-- Copy icon and SimConnect to output -->
   <ItemGroup>
     <Content Include="icon.ico">
