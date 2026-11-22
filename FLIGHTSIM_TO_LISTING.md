@@ -6,7 +6,7 @@ Paste these into the upload form. Category: **Tools / Utilities**. Compatibility
 MSFS Auto Unpause
 
 ## Short description
-Unpauses MSFS 2024 automatically after an internet drop. Made for long-haul and overnight flights.
+Automatically unpauses MSFS 2024 when an internet drop pauses your flight. Built for long-haul and overnight flights while you're AFK.
 
 ## Description
 
