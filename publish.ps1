@@ -45,11 +45,9 @@ foreach ($f in $required) {
 
 # Zip the folder itself so users extract a single "MSFSAutoUnpause" folder
 Compress-Archive -Path $stageDir -DestinationPath $zipPath
-$hash = (Get-FileHash (Join-Path $stageDir 'MSFSAutoUnpause.exe') -Algorithm SHA256).Hash
 $size = '{0:N1} MB' -f ((Get-Item $zipPath).Length / 1MB)
 
 Write-Host ""
 Write-Host "Done: $zipPath  ($size)" -ForegroundColor Green
 Write-Host "Files in zip: $((Get-ChildItem $stageDir -Recurse -File).Count)"
-Write-Host "SHA256 of MSFSAutoUnpause.exe (for the Flightsim.to description): $hash"
 Write-Host "Next: upload to virustotal.com, then Flightsim.to (and optionally a GitHub release)."

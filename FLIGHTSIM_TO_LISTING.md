@@ -40,8 +40,6 @@ Good to know
 * The program isn't code-signed. If Windows SmartScreen appears, click "More info" and then "Run anyway".
 * Some antivirus programs may flag it because it sends key presses and reads the screen to find the "Resume" button. The source code is public.
 * If it didn't unpause when it should have, please attach your log file from %APPDATA%\MSFSAutoUnpause\logs to your comment or GitHub issue.
-* SHA256 of `MSFSAutoUnpause.exe`:
-* E12C44858FAF453D3EABD18D6A80ABEA03950D514808EBE6E7A73B0DDB0D3E4F
 * Source code: [github.com/ItzChickenYall/MSFSAutoUnpause](https://github.com/ItzChickenYall/MSFSAutoUnpause)
 
 ## Changelog for this version

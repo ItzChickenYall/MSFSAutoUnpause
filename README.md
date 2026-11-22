@@ -45,9 +45,9 @@ The SimConnect DLLs are kept next to the exe instead of inside it. `Microsoft.Fl
 
 1. Bump `<Version>` in `MSFSAutoUnpause/MSFSAutoUnpause.csproj`.
 2. Add an entry to `CHANGELOG.md`.
-3. Run `.\publish.ps1` and note the SHA256 it prints.
+3. Run `.\publish.ps1`.
 4. Test the exe from `release\MSFSAutoUnpause\` on a real flight.
-5. Upload the zip as a new version of the existing Flightsim.to listing and update the SHA256 in the description.
+5. Upload the zip as a new version of the existing Flightsim.to listing.
 
 ## Project layout
 
