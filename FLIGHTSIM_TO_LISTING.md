@@ -6,30 +6,41 @@ Paste these into the upload form. Category: **Tools / Utilities**. Compatibility
 MSFS Auto Unpause
 
 ## Short description
-Gets your flight going again after an internet drop pauses MSFS 2024. Made for overnight long-hauls.
+Unpauses MSFS 2024 automatically after an internet drop. Made for long-haul and overnight flights.
 
 ## Description
 
-I fly a lot of long-hauls overnight, and more than once I've woken up to find the sim sat paused somewhere over Greenland with "Connection to network lost" on screen. The internet had dropped for a minute at 3am and MSFS just stopped and waited for me. Hours of flight, gone.
+MSFS Auto Unpause resumes your flight when MSFS 2024 pauses because of a lost internet connection ("Connection to network lost"). It runs in the system tray, waits until your connection is back and stable, then closes the pause menu for you.
 
-So I made this. It's a little app that sits in your system tray while you fly. If MSFS pauses because your internet dropped, it waits for the connection to come back and then unpauses the sim for you, same as if you'd pressed Escape yourself.
+Pauses you make yourself, including Pause at Top of Descent, are left alone.
 
-It only steps in when the pause was caused by the internet. If you pause the sim yourself, or you're using Pause at Top of Descent, it leaves it alone.
+Features
 
-**How to use it**
-1. Unzip the MSFSAutoUnpause folder anywhere you like. It's a normal app, so it doesn't go in your Community folder.
-2. Run MSFSAutoUnpause.exe. Windows might show a blue "Windows protected your PC" box because I haven't paid for a code-signing certificate. Click "More info" and then "Run anyway".
-3. Load into a flight. That's it, it starts watching on its own.
+* Only reacts to pauses caused by an internet drop
+* Waits until the connection is stable again before unpausing (longer after long outages)
+* Also catches the case where MSFS pauses a minute or more after the drop
+* Unpauses with Escape, and clicks "Resume" on screen if Escape doesn't work
+* Only sends input when MSFS is the active window
+* Runs in the system tray, optional start with Windows
+* Logs every pause and unpause to %APPDATA%\MSFSAutoUnpause\logs
+* No installation, no .NET download, no admin rights needed
 
-There's a settings button if you want it to start with Windows. You don't need to install .NET or anything else, everything's in the folder.
+How to use
 
-**A couple of things to know**
-- When it unpauses, it brings MSFS to the front and presses Escape (or clicks Resume if Escape doesn't do it). If you happen to be using the PC at that moment, MSFS will jump in front of whatever you're doing.
-- Because it presses keys and reads the screen to find the Resume button, the odd antivirus might get suspicious. It's open source, so you can see exactly what it does.
+* Unzip the archive to any folder. Don't put it into your Community folder.
+* Start `MSFSAutoUnpause.exe`.
+* Load a flight. Monitoring starts automatically.
 
-It's free and the code's on GitHub: https://github.com/ItzChickenYall/MSFSAutoUnpause
+Good to know
 
-If it doesn't unpause when it should, leave a comment or open an issue on GitHub and attach your log file from %APPDATA%\MSFSAutoUnpause\logs. That's the quickest way for me to work out what happened.
+* Tested with MSFS 2024 only.
+* To unpause, the app brings MSFS to the front. If you're using the PC at that moment, MSFS will jump in front of your other windows.
+* The program isn't code-signed. If Windows SmartScreen appears, click "More info" and then "Run anyway".
+* Some antivirus programs may flag it because it sends key presses and reads the screen to find the "Resume" button. The source code is public.
+* If it didn't unpause when it should have, please attach your log file from %APPDATA%\MSFSAutoUnpause\logs to your comment or GitHub issue.
+* SHA256 of `MSFSAutoUnpause.exe`:
+* D96FD02D33154A70B14FAF2FCEE080849455418B2B32EB89D3D558E2FE4B253C
+* Source code: [github.com/ItzChickenYall/MSFSAutoUnpause](https://github.com/ItzChickenYall/MSFSAutoUnpause)
 
 ## Changelog for this version
 1.1.0
