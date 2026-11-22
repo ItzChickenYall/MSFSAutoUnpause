@@ -1,0 +1,18 @@
+# Build output
+bin/
+obj/
+*.user
+.vs/
+
+# Local release staging / old manual backups (use git history + GitHub Releases instead)
+Distribution/
+Backups/
+release/
+
+# Private development notes (kept locally, not published)
+dev-notes.txt
+
+# Misc
+*.log
+*.lnk
+Thumbs.db
