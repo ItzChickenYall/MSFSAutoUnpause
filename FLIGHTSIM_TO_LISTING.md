@@ -1,6 +1,8 @@
 # Flightsim.to listing draft
 
-Paste these into the upload form. Category: **Tools / Utilities**. Compatibility: **MSFS 2024**.
+Live listing: https://flightsim.to/addon/119750/msfs-auto-unpause  (first uploaded 2026-11-22, v1.1.0)
+
+Category: **Tools / Utilities**. Compatibility: **MSFS 2024**.
 
 ## Title
 MSFS Auto Unpause

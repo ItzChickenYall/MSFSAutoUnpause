@@ -1,6 +1,7 @@
 MSFS Auto Unpause
 =================
 Made by ItzChickenYall  |  Free & open source (MIT License)
+Download:    https://flightsim.to/addon/119750/msfs-auto-unpause
 Source code: https://github.com/ItzChickenYall/MSFSAutoUnpause
 
 
@@ -83,7 +84,7 @@ GOOD TO KNOW
 
 REPORTING BUGS
 --------------
-Please open an issue on GitHub (or comment on Flightsim.to) and attach the
+Please open an issue on GitHub (or comment on the Flightsim.to page) and attach the
 log file from the night it happened.
 
 
