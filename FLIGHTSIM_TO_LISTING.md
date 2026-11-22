@@ -44,11 +44,12 @@ Good to know
 
 ## Changelog for this version
 1.1.0
-- Unpausing actually works now. The old version used a SimConnect command that MSFS 2024 quietly ignores.
-- Waits for your internet to properly settle before unpausing, so it doesn't fire too early after a long drop.
-- Catches the case where MSFS pauses a minute or so after the internet blips.
-- Won't press anything unless MSFS is actually the window in front.
-- New icon, and the version number now shows in the app.
+- Fixed: unpausing now works in MSFS 2024 (it presses Escape, or clicks Resume if needed)
+- Waits until your internet is stable before unpausing
+- Also catches pauses that happen a minute or more after the drop
+- Only sends input when MSFS is the active window
+- Now a single exe, no .NET install needed
+- New icon, version number shown in the app
 
 ## Images (in release\fsto-images\)
 1. `cover.jpg`: main image
