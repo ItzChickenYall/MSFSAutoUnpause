@@ -3,50 +3,51 @@
 Paste these into the upload form. Category: **Tools / Utilities**. Compatibility: **MSFS 2024**.
 
 ## Title
-MSFS Auto Unpause: resume after internet drops
+MSFS Auto Unpause
 
 ## Short description
-Automatically resumes your flight after an internet drop pauses MSFS 2024. Made for long-haul and overnight flights.
+Gets your flight going again after an internet drop pauses MSFS 2024. Made for overnight long-hauls.
 
 ## Description
 
-Ever left a long-haul running overnight and woken up to find MSFS paused over the Atlantic with "Connection to network lost", six hours of flight time wasted?
+I fly a lot of long-hauls overnight, and more than once I've woken up to find the sim sat paused somewhere over Greenland with "Connection to network lost" on screen. The internet had dropped for a minute at 3am and MSFS just stopped and waited for me. Hours of flight, gone.
 
-**MSFS Auto Unpause** is a small tray app that watches for exactly that. When your internet comes back, it brings MSFS to the front and closes the pause menu for you, so your flight carries on.
+So I made this. It's a little app that sits in your system tray while you fly. If MSFS pauses because your internet dropped, it waits for the connection to come back and then unpauses the sim for you, same as if you'd pressed Escape yourself.
 
-**Features**
-- Only acts on network-caused pauses. Your own Escape pauses and Pause-at-TOD are left alone.
-- Waits until your connection is stable before resuming, not just the first moment it comes back.
-- Uses Escape like you would, and falls back to finding and clicking the "Resume" button.
-- Runs in the system tray. Optional start with Windows.
-- No install and no runtime to download: unzip and run.
-- Detailed logs if anything goes wrong.
-- Free and open source (MIT). Full source code on GitHub: https://github.com/ItzChickenYall/MSFSAutoUnpause
+It only steps in when the pause was caused by the internet. If you pause the sim yourself, or you're using Pause at Top of Descent, it leaves it alone.
 
-**Installation**
-1. Unzip the `MSFSAutoUnpause` folder anywhere (NOT the Community folder, since this is a standalone app).
-2. Run `MSFSAutoUnpause.exe`. If Windows SmartScreen appears, click *More info → Run anyway* (the app isn't code-signed).
-3. Load a flight. Monitoring starts automatically.
+**How to use it**
+1. Unzip the MSFSAutoUnpause folder anywhere you like. It's a normal app, so it doesn't go in your Community folder.
+2. Run MSFSAutoUnpause.exe. Windows might show a blue "Windows protected your PC" box because I haven't paid for a code-signing certificate. Click "More info" and then "Run anyway".
+3. Load into a flight. That's it, it starts watching on its own.
 
-**Good to know**
-- To resume, the app focuses the MSFS window and sends a real key press or click. If you're using the PC at that moment, MSFS will pop to the front.
-- Some antivirus programs are suspicious of apps that send key presses or take screenshots (the app reads the screen to find the "Resume" button). The source code is public if you want to check exactly what it does.
+There's a settings button if you want it to start with Windows. You don't need to install .NET or anything else, everything's in the folder.
 
-**Source and bug reports:** https://github.com/ItzChickenYall/MSFSAutoUnpause
+**A couple of things to know**
+- When it unpauses, it brings MSFS to the front and presses Escape (or clicks Resume if Escape doesn't do it). If you happen to be using the PC at that moment, MSFS will jump in front of whatever you're doing.
+- Because it presses keys and reads the screen to find the Resume button, the odd antivirus might get suspicious. It's open source, so you can see exactly what it does.
+
+It's free and the code's on GitHub: https://github.com/ItzChickenYall/MSFSAutoUnpause
+
+If it doesn't unpause when it should, leave a comment or open an issue on GitHub and attach your log file from %APPDATA%\MSFSAutoUnpause\logs. That's the quickest way for me to work out what happened.
 
 ## Changelog for this version
-Copy the 1.1.0 section from CHANGELOG.md.
+1.1.0
+- Unpausing actually works now. The old version used a SimConnect command that MSFS 2024 quietly ignores.
+- Waits for your internet to properly settle before unpausing, so it doesn't fire too early after a long drop.
+- Catches the case where MSFS pauses a minute or so after the internet blips.
+- Won't press anything unless MSFS is actually the window in front.
+- New icon, and the version number now shows in the app.
 
-## Screenshots to take (Flightsim.to needs at least one image)
-1. The main window showing "Monitoring" during a flight.
-2. The main window on "Waiting to reconnect…" or "Reconnected · resuming in Xs…".
-3. The Settings window.
-4. Optional: the tray icon menu.
+## Images (in release\fsto-images\)
+1. `cover.jpg`: main image
+2. `main_inflight.png`: the app window during a flight
+3. `icon.png`: thumbnail/logo if the form asks for one
 
 ## Before uploading
 - [ ] Bump `<Version>` in the csproj and date the CHANGELOG entry
 - [ ] Run `.\publish.ps1`
-- [ ] Unzip the result to a fresh folder and test a real flight with that copy
+- [ ] Test a real flight with the new build
 - [ ] Upload the zip to virustotal.com and check the result
-- [ ] Create a GitHub Release (tag `v1.1.0`) and attach the zip
-- [ ] Upload the same zip to Flightsim.to
+- [ ] Upload the zip to Flightsim.to
+- [ ] Optional: create a GitHub Release (tag `v1.1.0`) and attach the same zip
