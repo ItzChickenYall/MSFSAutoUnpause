@@ -1,7 +1,7 @@
 MSFS Auto Unpause
 =================
 Made by ItzChickenYall  |  Free & open source (MIT License)
-Source code: https://github.com/<your-username>/MSFSAutoUnpause
+Source code: https://github.com/ItzChickenYall/MSFSAutoUnpause
 
 
 WHAT IT DOES

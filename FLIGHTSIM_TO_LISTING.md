@@ -21,7 +21,7 @@ Ever left a long-haul running overnight and woken up to find MSFS paused over th
 - Runs in the system tray. Optional start with Windows.
 - No install and no runtime to download: unzip and run.
 - Detailed logs if anything goes wrong.
-- Free and open source (MIT), with the full source on GitHub.
+- Free and open source (MIT). Full source code on GitHub: https://github.com/ItzChickenYall/MSFSAutoUnpause
 
 **Installation**
 1. Unzip the `MSFSAutoUnpause` folder anywhere (NOT the Community folder, since this is a standalone app).
@@ -32,7 +32,7 @@ Ever left a long-haul running overnight and woken up to find MSFS paused over th
 - To resume, the app focuses the MSFS window and sends a real key press or click. If you're using the PC at that moment, MSFS will pop to the front.
 - Some antivirus programs are suspicious of apps that send key presses or take screenshots (the app reads the screen to find the "Resume" button). The source code is public if you want to check exactly what it does.
 
-**Source and bug reports:** https://github.com/<your-username>/MSFSAutoUnpause
+**Source and bug reports:** https://github.com/ItzChickenYall/MSFSAutoUnpause
 
 ## Changelog for this version
 Copy the 1.1.0 section from CHANGELOG.md.

@@ -2,7 +2,7 @@
 
 A small Windows tray app that automatically resumes **Microsoft Flight Simulator 2024** after an internet drop pauses your flight. It's built for long-haul and overnight flights, so a short internet blip doesn't leave you stuck paused over the ocean for six hours.
 
-**Download:** [Flightsim.to](https://flightsim.to/) · [GitHub Releases](../../releases)
+**Download:** get the ready-to-run zip from Flightsim.to (link coming soon). This repo is the source code.
 
 ## How it works
 
